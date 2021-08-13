@@ -1,0 +1,21 @@
+<section class="property-binding">
+  <article>
+    <ul>
+      <h3>Interpolation / Interpolação</h3>
+
+      <li>String renderizada com interpolação: <i>{{ url }}</i>;</li>
+      <li>Resultado de 1 + 1 é: <i>{{ 1 + 1}}</i>;</li>
+      <li>Resultado de 1 + 1 não é <i>{{ 1 + 1 + getValor() }}</i>;</li>
+      <li><i>{{ getCurtirCurso() }} - {{ cursoAngular }}</i></li>
+      <li>getCurtirCurso() e cursoAngular = <i>{{ getCurtirCurso() && cursoAngular }}</i></li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="imagens">
+      <img src="{{ imageUrl }}">
+      <img [src]="imageUrl">
+      <img bind-src="imageUrl">
+    </div>
+  </article>
+</section>
