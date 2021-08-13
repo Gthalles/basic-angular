@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+article {
+  margin: 100px 50px 100px 50px;
+  padding: 20px;
+  border: dashed 0.5px green;
+}

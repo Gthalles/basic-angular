@@ -1,12 +1,13 @@
+* {
+  box-sizing: border-box;
+}
 i {
   color: green;
 }
 
-article {
-  margin-top: 35px;
-  border: dashed 0.5px green;
-}
-
 .imagens img {
-  margin: 35px 60px 35px 60px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+
 }

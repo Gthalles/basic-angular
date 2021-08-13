@@ -1,21 +1,45 @@
-<section class="property-binding">
-  <article>
-    <ul>
-      <h3>Interpolation / Interpolação</h3>
+<article>
+  <ul>
+    <h3>Interpolation / Interpolação</h3>
 
-      <li>String renderizada com interpolação: <i>{{ url }}</i>;</li>
-      <li>Resultado de 1 + 1 é: <i>{{ 1 + 1}}</i>;</li>
-      <li>Resultado de 1 + 1 não é <i>{{ 1 + 1 + getValor() }}</i>;</li>
-      <li><i>{{ getCurtirCurso() }} - {{ cursoAngular }}</i></li>
-      <li>getCurtirCurso() e cursoAngular = <i>{{ getCurtirCurso() && cursoAngular }}</i></li>
-    </ul>
-  </article>
+    <li>String renderizada com interpolação: <i>{{ url }}</i>;</li>
+    <li>Resultado de 1 + 1 é: <i>{{ 1 + 1}}</i>;</li>
+    <li>Resultado de 1 + 1 não é <i>{{ 1 + 1 + getValor() }}</i>;</li>
+    <li><i>{{ getCurtirCurso() }} - {{ cursoAngular }}</i></li>
+    <li>getCurtirCurso() e cursoAngular = <i>{{ getCurtirCurso() && cursoAngular }}</i></li>
+  </ul>
+</article>
 
-  <article>
-    <div class="imagens">
-      <img src="{{ imageUrl }}">
-      <img [src]="imageUrl">
-      <img bind-src="imageUrl">
+<article>
+  <div class="imagens">
+    <img src="{{ imageUrl }}">
+    <img [src]="imageUrl">
+    <img bind-src="imageUrl">
+  </div>
+</article>
+
+<article>
+  <h3>Class e Style Binding</h3>
+  <div>
+    Selecione uma classe:
+    <select #classe (change)="0">
+      <option value="alert-success">Success</option>
+      <option value="alert-warning">Alert</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-danger">Error</option>
+    </select>
+    <br><br>
+
+    <div class="alert {{ classe.value }}" role="alert">
+      Texto colorido conforme valor do combobox.
     </div>
-  </article>
-</section>
+
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Success</div>
+    <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alert</div>
+    <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Info</div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Error</div>
+
+    <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">Esse texto somente aparece em caso de erro.</div>
+
+  </div>
+</article>
