@@ -14,6 +14,8 @@ export class EventBindingComponent implements OnInit {
   isMouseOver: boolean = false;
   name: string = "abc";
   pessoa = {nome: "", idade: ""};
+  nomeDoCurso: string = "Angular";
+
 
   // Métodos
   botaoClicado() {
