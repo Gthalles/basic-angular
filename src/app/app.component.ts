@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project';
+  //Atributos
+  valor: number = 5;
+  deletarCiclo: boolean = false;
+
+  // Métodos
+  mudarValor() {
+    this.valor++;
+  }
+
+  destruirCiclo() {
+    this.deletarCiclo = true;
+  }
 }

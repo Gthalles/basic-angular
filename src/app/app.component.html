@@ -7,5 +7,11 @@
     <app-data-binding></app-data-binding>
 
     <app-event-binding></app-event-binding>
+
+    <article>
+      <app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+      <button class="btn btn-primary" (click)="mudarValor()">Mudar Valor</button>
+      <button class="btn btn-primary" (click)="destruirCiclo()">Destruir Ciclo</button>
+    </article>
   </section>
 </div>
