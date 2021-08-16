@@ -4,3 +4,9 @@ article {
   padding: 20px;
   border: dashed 0.5px green;
 }
+
+.highlight {
+  padding: 5px;
+  background: green;
+  font-weight: 700;
+}
