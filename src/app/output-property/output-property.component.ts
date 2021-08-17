@@ -13,13 +13,13 @@ export class OutputPropertyComponent implements OnInit {
   @ViewChild('campoInput') campoValorInput!: ElementRef;
 
   // Métodos
-  incrementa() {  
-    console.log(this.campoValorInput);  
-    this.campoValorInput.nativeElement.value++;
+  decrementa() {
+    console.log(this.campoValorInput);
+    this.campoValorInput.nativeElement.value--;
     this.mudouValor.emit({novoValor: this.valor});
   }
 
-  decrementa() {
+  incrementa() {
     console.log(this.campoValorInput);
     this.campoValorInput.nativeElement.value++;
     this.mudouValor.emit({novoValor: this.valor});
@@ -27,7 +27,6 @@ export class OutputPropertyComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
